@@ -1,0 +1,104 @@
+#app-container {
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  .panel-base {
+    border: 2px solid black;
+    border-radius: 14px;
+    padding: 4px;
+    background-color: black;
+  }
+
+  .cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    font-weight: bold;
+    font-size: 36px;
+    cursor: pointer;
+  }
+
+  .candidates {
+    align-items: flex-end;
+    font-size: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1em);
+  }
+
+  #grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3px;
+    margin-right: 40px;
+
+    .block {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    :first-child {
+      :first-child {
+        border-top-left-radius: 8px;
+      }
+    }
+
+    :nth-child(3) {
+      :nth-child(3) {
+        border-top-right-radius: 8px;
+      }
+    }
+
+    :nth-child(7) {
+      :nth-child(7) {
+        border-bottom-left-radius: 8px;
+      }
+    }
+
+    :nth-child(9) {
+      :nth-child(9) {
+        border-bottom-right-radius: 8px;
+      }
+    }
+  }
+
+  #panel {
+    #numbers {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      margin-bottom: 10px;
+
+      :first-child {
+        border-top-left-radius: 8px;
+      }
+
+      :nth-child(5) {
+        border-top-right-radius: 8px;
+      }
+
+      :nth-child(6) {
+        border-bottom-left-radius: 8px;
+      }
+
+      :nth-child(10) {
+        border-bottom-right-radius: 8px;
+      }
+    }
+
+    #candidate {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
+}

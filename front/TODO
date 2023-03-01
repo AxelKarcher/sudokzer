@@ -1,0 +1,5 @@
+- refacto handleCellClick
+- généraliser le style
+- application d'une grille
+- vérification d'une grille
+- switch pour isCandidate
